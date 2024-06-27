@@ -16,7 +16,7 @@ const getRandomStarColor = () => {
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(10000), { radius: 10 }));
+  const [sphere] = useState(() => random.inSphere(new Float32Array(10000), { radius: 4 }));
   const [colors] = useState(() => {
     const colorArray = new Float32Array(sphere.length);
     for (let i = 0; i < sphere.length; i += 3) {
@@ -49,7 +49,7 @@ const Stars = (props) => {
 };
 
 const ScrollCamera = () => {
-  const { camera } = useThree();
+  const { camera, size, gl } = useThree();
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -64,9 +64,12 @@ const ScrollCamera = () => {
   }, []);
 
   useFrame(() => {
-    camera.position.x = scrollY * 0.001;
-    camera.position.y = scrollY * 0.002;
-    camera.position.z = 3 + scrollY * 0.003;
+    camera.position.x = scrollY * 0.0002;
+    camera.position.z = 0.5 + scrollY * 0.0008;
+    camera.lookAt(0, 0, 0); // Ensure the camera always looks at the origin
+    camera.rotateX(0.3);
+    camera.rotateY(-0.2);
+    camera.rotateZ(-0.2);
   });
 
   return null;
@@ -74,8 +77,8 @@ const ScrollCamera = () => {
 
 const StarsCanvas = () => {
   return (
-    <div className='w-full h-full absolute inset-0 z-[-1]'>
-      <Canvas camera={{ position: [0, 0, 3] }}>
+    <div className="w-full h-full fixed inset-0 z-[-1]">
+      <Canvas camera={{ position: [0, 0, 0.5] }}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
