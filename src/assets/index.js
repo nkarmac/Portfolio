@@ -13,6 +13,7 @@ import sd42 from "./company/sd42.png"
 import starangels from "./starangels.png";
 import prototype from "./prototype.png";
 import vrviewpointprediction from "./vrviewpointprediction.png";
+import recipefinder from "./recipefinder.png"
 
 export {
   machinelearning,
@@ -28,4 +29,5 @@ export {
   starangels,
   prototype,
   vrviewpointprediction,
+  recipefinder
 };

@@ -9,6 +9,7 @@ import {
   starangels,
   prototype,
   vrviewpointprediction,
+  recipefinder
 } from "../assets";
 
 export const navLinks = [
@@ -83,6 +84,7 @@ const experiences = [
     date: "Sep 2019 - Aug 2020",
     points: [
       "Researched Virtual Reality software optimizations",
+      "Performed data analysis on a large dataset of user head movements to identify common user habits (R)",
       "Applied Machine Learning to reduce computation of 360° Video via user movement prediction (Python TensorFlow)",
       "Demonstrated leadership to efficiently direct workflow",
     ],
@@ -106,9 +108,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "August 2020 - Present",
     points: [
-      "Serviced clients for website development, app creation, server database management, and API integration",
-      "Designed diverse mobile utility applications with Android Studio and Unity (Java, C#)",
-      "Refactored/reorganized and set up large scale server databases (SQL, Postgresql)",
+      "Serviced clients for web development, app creation, server database management, and API integration",
+      "Designed & deployed diverse full stack utility applications (React, Node.js, Express)",
+      "Refactored/reorganized and set up large scale server databases (SQL, Postgresql, MongoDB)",
       "Written and conducted comprehensive tests utilizing test suites for a multitude of applications (jUnit, pytest)",
       "Managed client requests with confidentiality and professionalism",
     ],
@@ -125,6 +127,16 @@ const projects = [
     image: starangels,
     source_code_link: "https://github.com/nkarmac/Star-Angels",
     web_link: "https://nkarmac.github.io/Star-Angels/",
+  },
+  {
+    name: "Recipe Finder",
+    description:
+      "React/Node Full Stack app for searching recipes based on listed ingredients. Deployed with backend api database.",
+    tags: [
+    ],
+    image: recipefinder,
+    source_code_link: "https://github.com/nkarmac/Recipe-Finder",
+    web_link: "https://nkarmac.github.io/Recipe-Finder/",
   },
   {
     name: "Hiring App",

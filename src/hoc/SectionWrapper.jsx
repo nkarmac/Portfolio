@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
-const useViewportHeight = () => {
+const useViewport = () => {
   const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
       setHeight(window.innerHeight);
+      setWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
@@ -19,13 +21,13 @@ const useViewportHeight = () => {
     };
   }, []);
 
-  return height;
+  return [height,width];
 };
 
 const StarWrapper = (Component, idName) =>
   function HOC() {
-    const viewportHeight = useViewportHeight();
-    const isSmallViewport = viewportHeight < 650;
+    const [viewportHeight,viewportWidth] = useViewport();
+    const isSmallViewport = viewportHeight < 650 || viewportWidth < 375;
 
     return (
       <motion.section
@@ -33,7 +35,7 @@ const StarWrapper = (Component, idName) =>
         initial={isSmallViewport ? 'show' : 'hidden'}
         animate={isSmallViewport ? 'show' : undefined}
         whileInView={isSmallViewport ? undefined : 'show'}
-        viewport={{ once: true, amount: 0.33 }}
+        viewport={{ once: true, amount: 0.25 }}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
         <span className='hash-span' id={idName}>
