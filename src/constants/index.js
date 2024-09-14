@@ -1,3 +1,4 @@
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 import {
   database,
   machinelearning,
@@ -9,7 +10,29 @@ import {
   starangels,
   prototype,
   vrviewpointprediction,
-  recipefinder
+  recipefinder,
+  aws,
+  bootstrap,
+  C,
+  css,
+  docker,
+  html,
+  java,
+  javascript,
+  laravel,
+  mongodb,
+  mysql,
+  nodejs,
+  php,
+  postgresql,
+  python,
+  pytorch,
+  R,
+  react,
+  selenium,
+  spring,
+  tailwind,
+  tensorflow
 } from "../assets";
 
 export const navLinks = [
@@ -65,15 +88,29 @@ const experiences = [
   },
   */
   {
-    title: "Research Assistant (Intern)",
-    company_name: "University Of Victoria",
-    icon: uvic,
+    title: "Web Engineer",
+    company_name: "",
+    icon: selfemployed,
     iconBg: "#383E56",
-    date: "May 2019 - Aug 2019",
+    date: "Jul 2020 - Present",
     points: [
-      "Assisted research on trend/graph correlations and predictions performed via data analysis (R, Python)",
-      "Applied prediction model to programming language popularity, stock markets, cryptocurrencies, etc",
-      "Co-Produced a paper on Time Series Graph Correlations",
+      "Servicing clients for web development, app creation, server database management, and API integration",
+      "Designing front end interfaces",
+      "Deploying back end applications with API integration",
+      "Organizing and optimizing large scale server databases",
+      "Comprehensive unit testing, integration testing, and end-to-end testing",
+    ],
+  },
+  {
+    title: "Tech Support Teaching Assistant",
+    company_name: "Pitt Meadows Secondary",
+    icon: sd42,
+    iconBg: "#383E56",
+    date: "Oct 2023 - Jan 2024",
+    points: [
+      "Developed District approved classroom sign-in application and database accessible by teachers",
+      "Provided technical support and software troubleshooting for teachers and students",
+      "Instructed entry-level programming and database management to students",
     ],
   },
   {
@@ -84,37 +121,113 @@ const experiences = [
     date: "Sep 2019 - Aug 2020",
     points: [
       "Researched Virtual Reality software optimizations",
-      "Performed data analysis on a large dataset of user head movements to identify common user habits (R)",
-      "Applied Machine Learning to reduce computation of 360° Video via user movement prediction (Python TensorFlow)",
+      "Performed data analysis on a large dataset of user head movements to identify common user habits ",
+      "Reduced 360° video render computation by 56% via a machine learning model ",
       "Demonstrated leadership to efficiently direct workflow",
     ],
   },
   {
-    title: "Tech Support & Volunteer Teaching Assistant",
-    company_name: "Pitt Meadows Secondary",
-    icon: sd42,
+    title: "Research Assistant (Intern)",
+    company_name: "University Of Victoria",
+    icon: uvic,
     iconBg: "#383E56",
-    date: "Oct 2023 - Jan 2024",
+    date: "May 2019 - Aug 2019",
     points: [
-      "Developed District approved classroom sign-in applications accessible by teachers",
-      "Instructed entry-level programming and database management to students (Python, SQL)",
-      "Showcased game-development techniques to students (Unreal Engine 5)",
+      "Assisted research on trend/graph correlations and predictions performed via data analysis ",
+      "Found correlation evidence of over 90% within large datasets: programming languages, stock markets, cryptocurrencies, etc",
+      "Co-Produced a paper on Time Series Graph Correlations",
     ],
+  },
+];
+
+const technologies = [
+  {
+    name: "HTML",
+    icon: html,
   },
   {
-    title: "Application + Website Developer",
-    company_name: "",
-    icon: selfemployed,
-    iconBg: "#383E56",
-    date: "August 2020 - Present",
-    points: [
-      "Serviced clients for web development, app creation, server database management, and API integration",
-      "Designed & deployed diverse full stack utility applications (React, Node.js, Express)",
-      "Refactored/reorganized and set up large scale server databases (SQL, Postgresql, MongoDB)",
-      "Written and conducted comprehensive tests utilizing test suites for a multitude of applications (jUnit, pytest)",
-      "Managed client requests with confidentiality and professionalism",
-    ],
+    name: "CSS",
+    icon: css,
   },
+  {
+    name: "JAVASCRIPT",
+    icon: javascript,
+  },
+  {
+    name: "PYTHON",
+    icon: python,
+  },
+  {
+    name: "JAVA",
+    icon: java,
+  },
+  {
+    name: "R",
+    icon: R,
+  },
+  {
+    name: "C",
+    icon: C,
+  },
+  {
+    name: "REACT",
+    icon: react,
+  },
+  {
+    name: "TAILWIND",
+    icon: tailwind,
+  },
+  {
+    name: "BOOTSTRAP",
+    icon: bootstrap,
+  },
+  {
+    name: "NODE",
+    icon: nodejs,
+  },
+  {
+    name: "SPRING",
+    icon: spring,
+  },
+  {
+    name: "DOCKER",
+    icon: docker,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "MYSQL",
+    icon: mysql,
+  },
+  {
+    name: "POSTGRESQL",
+    icon: postgresql,
+  },
+  {
+    name: "MONGODB",
+    icon: mongodb,
+  },
+  {
+    name: "LARAVEL",
+    icon: laravel,
+  },
+  {
+    name: "PHP",
+    icon: php,
+  },
+  {
+    name: "TENSORFLOW",
+    icon: tensorflow,
+  },
+  {
+    name: "PYTORCH",
+    icon: pytorch,
+  },
+
+  
+  
 ];
 
 const projects = [
@@ -168,4 +281,4 @@ const projects = [
   },
 ];
 
-export { services, experiences, projects };
+export { services, experiences, technologies, projects };
