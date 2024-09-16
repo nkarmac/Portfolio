@@ -15,7 +15,7 @@ const Hero = () => {
             Welcome. <br/>I'm Nick.
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 heroNames`}>
-            A computer science & physics graduate. <br/>I develop apps, analyze data, <br/>
+            A computer science & physics graduate. <br/>I develop apps, build databases, <br/>
             and research software.
           </p>
         </div>
